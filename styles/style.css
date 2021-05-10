@@ -1,0 +1,197 @@
+/*
+  future work: ++++
+  bugs: [[]]
+  general sections: ><><
+  subsections: ||
+/*-----------------------------------
+><>< GENERAL STYLES (for all pages)
+-----------------------------------*/
+/* || @media prompts, @import */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader&family=Rubik&display=swap');
+/* || variables*/
+:root {
+  /*generic styles*/
+  --radius:5px;
+  /*transitions*/
+  --normTrans:0.2s;
+  --slowTrans:0.4s;
+  --superSlowTrans:2s;
+  /*text colors*/
+  --bgBlue:rgb(43,44,66);
+  --darkBlue:rgb(100,100,150);
+  --headerYellow:rgb(255,200,85);
+  --accentRed:rgb(250,120,100);
+  --accentGreen:rgb(70,255,210);
+  --accentBlue:rgb(40,155,240);
+  --grey:rgb(230,230,230);
+  --darkGrey:rgb(175,175,175);
+}
+/* || general styles (eg. body, h1, h2) */
+body {
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  margin:0;
+  background-color:var(--bgBlue);
+  background-image:url("../images/space.png");
+}
+p,input,button {
+  font-family:'Rubik', sans-serif;
+  font-size:clamp(12px,1.5vw,15px);
+  margin:0;
+  color:var(--grey);
+}
+button {
+  background-color:transparent;
+  border:2px solid var(--darkBlue);
+  border-radius:var(--radius);
+  padding:1px 10px;
+  color:var(--accentGreen);
+  transition:var(--normTrans);
+  position:relative;
+}
+button:hover, .clickable:hover {
+  background-color:rgb(60,60,90);
+}
+button:active, .clickable:active {
+  transition:0s;
+  background-color:rgb(100,100,150);
+  border:2px solid var(--accentGreen);
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family:'Newsreader', serif;
+  font-weight:normal;
+  margin:0;
+  color:var(--headerYellow);
+  overflow-wrap: break-word;
+}
+/* || utility classes */
+.clickable {
+  transition:var(--normTrans);
+}
+.textCentered {
+  text-align:center;
+}
+.centered {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.smallText {
+  font-size:clamp(9px,1vw,12px);
+}
+.greyText {
+  color:var(--darkGrey);
+}
+.yellowText {
+  color:var(--headerYellow);
+}
+.hoverable { /*class required for all elements with tooltips*/
+  position:relative;
+}
+.hoverable .tooltip {
+  position:absolute;
+  left:50%;
+  transform:translatex(-50%);
+  top:calc(100% + 10px);
+  padding:2px 10px;
+  border-radius:var(--radius);
+  background-color:rgba(0,0,0,0.1);
+  opacity:0; /*[[]] BUG: for some reason, it's opacity isnt immediately 0 onload so it's visible for a bit*/
+  transition:var(--normTrans) opacity;
+}
+.hoverable:hover .tooltip {
+  opacity:1;
+}
+.darkBackground {
+  height:100vh;
+  width:100vw;
+  position:fixed;
+  z-index:1000;
+  background-color:rgb(0,0,0);
+  opacity:0.3;
+  transition:var(--slowTrans);
+  display:none;
+}
+.darkBackground:hover {
+  opacity:0;
+}
+.sectionHeader {
+  color:var(--accentBlue);
+  margin:10px 0 0 0;
+}
+.basicBorder {
+  background-color:var(--bgBlue);
+  border:2px solid var(--darkBlue);
+  border-radius:var(--radius);
+  padding:7px;
+  box-sizing:border-box;
+}
+.parentClone {
+  position:absolute;
+  left:0;
+  top:0;
+  padding:inherit;
+  width:100%;
+  height:100%;
+  box-sizing:border-box;
+}
+.fullwidth {
+  width:100%;
+}
+.hidden {
+  opacity:0;
+  pointer-events:none;
+}
+/* || utility animations*/
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+/*--------------------------------
+><>< SPECIFIC STYLES
+--------------------------------*/
+/* || shop, items */
+.shopParent {
+  display:flex;
+}
+.selectedItem {
+  order:2;
+  position:relative;
+  padding-bottom:30px;
+  border:2px solid var(--accentGreen);
+}
+.bottomSection {
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding:3px 5px;
+}
+.bottomSection button {
+  position:absolute;
+  top:0;
+  right:10px;
+}
+.itemParent {
+  display:flex;
+  width:410px;
+  flex-wrap:wrap;
+}
+.item {
+  position:relative;
+  margin:2.5px 2.5px;
+  width:200px;
+}
+.item > p.smallText.greyText {
+  margin-bottom:10px;
+}
+/* || tags */
+.tag.restricted {
+  color:var(--accentRed);
+}
