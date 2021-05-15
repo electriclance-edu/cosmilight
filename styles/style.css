@@ -166,14 +166,14 @@ h1,h2,h3,h4,h5,h6 {
   padding-bottom:30px;
   border:2px solid var(--accentGreen);
 }
-.bottomSection {
+.selectedItem .bottomSection {
   width:100%;
   position:absolute;
   bottom:0;
   left:0;
   padding:3px 5px;
 }
-.bottomSection button {
+.selectedItem .bottomSection button {
   position:absolute;
   top:0;
   right:10px;

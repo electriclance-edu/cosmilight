@@ -16,7 +16,7 @@ class Item {
     this.price = data.price;
   }
   displayShop() {
-    
+
   }
   createElement() {
 
@@ -37,7 +37,7 @@ class PlayerData {
         earned:0
       },
       customersServed:0,
-      furnitureBought:0 //eg. self-checkout system, depackager
+      furnitureBought:0, //eg. self-checkout system, depackager
     }
   }
   static modifyMoney(amount) {
@@ -50,3 +50,7 @@ class PlayerData {
     }
   }
 }
+/*
+IDEA:
+bigger monitor/similarly stupid upgrade to unlock more order slots
+*/
