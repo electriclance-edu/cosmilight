@@ -7,6 +7,87 @@
     <title>Cosmilight</title>
   </head>
   <body> <!--contenteditable="true"-->
+    <div class="darkOverlay" onclick="fade(this)">
+      <div class="combatParent">
+        <div class="cardParent">
+          <div class="tooltipper card largeCard basicBox" style="background-image:url('images/space.png')">
+            <img src="images/themes/lunar.png" style="filter:invert(100%)">
+            <div class="tooltip">
+              <h3>Mato'o, The Infinite Choir</h3>
+              <p>
+                <span class="propertyText">All</span> cards receieve a <span class="effectText">1.2x effect bonus</span> for every 2 cards sung in a round.
+              </p>
+              <p class="smallText greyText">wind and voice surge all the same</p>
+            </div>
+          </div>
+          <div class="tooltipper card basicBox">
+
+            <div class="tooltip">
+              <h3>Toot</h3>
+              <p>
+                Deals <span class="attackText">5 damage</span>.
+              </p>
+              <p class="smallText greyText">a small breath</p>
+            </div>
+          </div>
+          <div class="tooltipper card basicBox">
+
+            <div class="tooltip">
+              <h3>Cascade</h3>
+              <p>
+                Each <span class="propertyText">Wind</span> card deals <span class="effectText attackText">+3 more damage</span> for every other <span class="propertyText">Wind</span> card on the field.
+              </p>
+              <p class="smallText greyText">even small breaths may begin a storm</p>
+            </div>
+          </div>
+          <div class="tooltipper card blankCard basicBox">
+
+          </div>
+        </div>
+        <div class="instruments">
+          <div class="instrument">
+            <div class="cardParent">
+              <div class="card basicBox">
+
+              </div>
+              <div class="card basicBox">
+
+              </div>
+              <div class="card basicBox">
+
+              </div>
+            </div>
+            <div class="tooltipper instrumentName basicBox">
+              <h3>Bone Flute</h3>
+              <div class="tooltip">
+                <p><span class="propertyText">Ancient</span> cards <span class="effectText">appear twice as often</span> and receive a <span class="effectText">1.1x effect bonus</span>.</p>
+                <p class="smallText greyText">dust and wind have whistled eternally</p>
+              </div>
+            </div>
+          </div>
+          <div class="instrument">
+            <div class="cardParent">
+              <div class="card basicBox">
+
+              </div>
+              <div class="card basicBox">
+
+              </div>
+              <div class="card basicBox">
+
+              </div>
+            </div>
+            <div class="tooltipper instrumentName basicBox">
+              <h3>Voice</h3>
+              <div class="tooltip">
+                <p><span class="propertyText">Normal</span> cards <span class="effectText">appear twice as often</span>.</p>
+                <p class="smallText greyText">magic obeys you</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="main xCentered">
       <div class="left">
         <div class="top">
@@ -26,8 +107,7 @@
       </div>
       <div class="right">
         <div>
-          <div class="locationImage" style="background-image:url('images/space.png')">
-          </div>
+          <div class="locationImage" style="background-image:url('images/space.png')"></div>
           <p class="italic textCentered locationSubtitle">A dusty wind disturbs the forest trees, carrying with it an unfamiliar scent.</p>
         </div>
         <div class="flexGrow" id="locationParent">

@@ -54,6 +54,7 @@ h1,h2,h3,h4,h5,h6,.headerText {
   border:2px solid rgb(60,60,60);
   color:rgb(255,253,247);
   position:relative;
+  transition-timing-function:ease-in-out;
 }
 .clickable div:first-child {
   position:absolute;
@@ -78,9 +79,25 @@ h1,h2,h3,h4,h5,h6,.headerText {
   transition:0.05s;
   padding-left:12px;
 }
+.propertyText {
+  color:rgb(0,0,200);
+}
+.effectText {
+  font-weight:bold;
+}
+.attackText {
+  color:rgb(200,0,0);
+}
+.elementText {
+  color:rgb(0,150,50);
+}
+.ODLDOSODASODJOJDSHFBDHBGKLSDtagText {
+  background-color:rgb(250,220,250);
+  padding:0 5px;
+  border-radius:3px;
+}
+
 /* specific styles */
-
-
 .main {
   height:100%;
   width:100%;
@@ -133,4 +150,86 @@ h1,h2,h3,h4,h5,h6,.headerText {
   background:rgb(255,253,247);
   background:linear-gradient(180deg, rgba(255,253,247,0) 40%, rgba(255,253,247,1) 100%);
   pointer-events:none;
+}
+
+
+/*combat*/
+.darkOverlay {
+  background-color:rgba(0,0,0,0.3);
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:1000;
+  transition:0.3s;
+}
+.darkOverlay:hover {
+  background:rgb(255,253,247);
+}
+.combatParent {
+  padding:10px;
+  opacity:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.cardParent {
+  display:flex;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.card {
+  height:130px;
+  width:100px;
+  align-self:center;
+  position:relative;
+  background-size:700%;
+}
+.card img {
+  width:100%;
+}
+.tooltip {
+  position:absolute;
+  width:300px;
+  background-color:rgb(255,253,247);
+  transform:translatex(-50%);
+  left:50%;
+  top:calc(100%);
+  z-index:100;
+  opacity:0;
+  pointer-events:none;
+  padding:10px;
+  border:3px solid rgb(60,60,60);
+  border-radius:10px;
+  transition:0.3s;
+  box-shadow:2px 2px 5px rgba(150,150,150,0.5);
+}
+.tooltipper:hover .tooltip {
+  opacity:1;
+  top:calc(100% + 10px);
+}
+.tooltip > * {
+  margin-bottom:3px;
+}
+.tooltip *:last-child {
+  margin-top:10px;
+  margin-bottom:0;
+  text-align:right;
+}
+.largeCard {
+  height:150px;
+  width:112px;
+}
+.blankCard {
+  opacity:0.4;
+}
+.basicBox {
+  padding:5px;
+  background-color:rgb(255,253,247);
+  margin:5px;
+  border:3px solid rgb(60,60,60);
+  box-sizing:border-box;
+  border-radius:10px;
+  position:relative;
 }
